@@ -209,6 +209,7 @@ header {
 }
 
 .overlay {
+    width: 100%;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -216,6 +217,7 @@ header {
     right: 0;    
     opacity: 0;
     transition: .3s ease;
+    
   }
 
 .product:hover .overlay {
