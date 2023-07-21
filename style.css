@@ -3,6 +3,11 @@
     padding: 0px;
     box-sizing:border-box;
 }
+body {
+    margin-right: 0 auto;
+    margin-left: 0 auto;
+    max-width: 1600px;
+}
 
 a {
     text-decoration: none;
@@ -136,6 +141,7 @@ header {
 
 .big {
     grid-column: span 3;
+    background-size: cover;
 }
 
 .sale__text {
@@ -562,7 +568,7 @@ header {
     }
 
     .top__main {
-        width: 100vw;
+        /* width: 100vw; */
         height: 100vh;
         justify-content: center;
     }
