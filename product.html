@@ -18,7 +18,48 @@
             <img src="img/search.svg" alt="Search">
         </div>
         <div class="header__right">
-            <a class="header__right__link" href="#"><img src="img/header_menu1.svg" alt="Menu"></a>
+            <details class="burger-menu">
+                <summary class="burger-menu__summary">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="23" viewBox="0 0 32 23" fill="none">
+                        <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8"/>
+                      </svg>
+                </summary>
+                <div class="burger-menu__content">
+                    <h3 class="burger-menu__title">MENU</h3>
+                    <details open class="burger-menu__item">
+                        <summary class="burger-menu__item__summary"><span class="burger-menu__item__head">MAN</span></summary>
+                        <div class="burger-menu__link-box">
+                            <a href="#" class="filter__link">Accessories</a>
+                            <a href="#" class="filter__link">Bags</a>
+                            <a href="#" class="filter__link">Denim</a>
+                            <a href="#" class="filter__link">T-Shirts</a>
+                        </div>
+                    </details>
+                    <details open class="burger-menu__item">
+                        <summary class="burger-menu__item__summary"><span class="burger-menu__item__head">WOMAN</span></summary>
+                        <div class="burger-menu__link-box">
+                            <a href="#" class="filter__link">Accessories</a>
+                            <a href="#" class="filter__link">Jackets & Coats</a>
+
+                            <a href="#" class="filter__link">Polos</a>
+                            <a href="#" class="filter__link">T-Shirts</a>
+                            <a href="#" class="filter__link">Shirts</a>
+                        </div>
+                    </details>
+                    <details open class="burger-menu__item">
+                        <summary class="burger-menu__item__summary"><span class="burger-menu__item__head">KIDS</span></summary>
+                        <div class="burger-menu__link-box">
+                            <a href="#" class="filter__link">Accessories</a>
+                            <a href="#" class="filter__link">Jackets & Coats</a>
+                            <a href="#" class="filter__link">Polos</a>
+                            <a href="#" class="filter__link">T-Shirts</a>
+                            <a href="#" class="filter__link">Shirts</a>
+                            <a href="#" class="filter__link">Bags</a>
+                        </div>
+                    </details>
+                </div>
+
+            </details>
             <a class="header__right__link" href="#"><img src="img/header_menu2.svg" alt="Menu"></a>
             <a class="header__right__link header__right__link__product_cart" href="#"><img src="img/header_menu3.svg"
                     alt="Menu"></a>
