@@ -67,6 +67,19 @@ a {
     }
 }
 
+.head {
+    height: 148px;
+    display: flex;
+    align-items: center;
+
+    &__title {
+        color: $colorSelectSite;
+        font-size: 24px;
+        font-weight: 400;
+    }
+
+}
+
 .burger-menu {
 
     &__content {
@@ -298,6 +311,204 @@ a {
 
     }
 
+}
+
+.cart {
+    padding-top: 96px;
+    display: flex;
+
+    &__left {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        margin-right: 8%;
+
+        &__product {
+            display: flex;
+            flex-direction: row;
+
+            &__img {
+                max-width: 262px;
+
+            }
+
+            &__info {
+                padding: 22px 31px 62px;
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+
+                &__title {
+                    max-width: 262px;
+                    color: $backBlock;
+                    font-size: 24px;
+                    font-weight: 400;
+                    margin-bottom: 42px;
+                }
+
+                &__text {
+                    color: #575757;
+                    font-size: 22px;
+                    font-weight: 400;
+
+                    &1::after {
+                        content: "$300";
+                        color: $colorSelectSite;
+                        padding-left: 6px;
+                    }
+
+                    &2::after {
+                        content: "Red";
+                        color: #6F6E6E;
+                        padding-left: 6px;
+                    }
+
+                    &3::after {
+                        content: "Xl";
+                        color: #6F6E6E;
+                        padding-left: 6px;
+                    }
+
+                    &4::after {
+                        content: "2";
+                        color: #656565;
+                        font-size: 18px;
+                        padding-left: 40px;
+                    }
+
+                }
+            }
+        }
+
+        &__buttons {
+            margin-top: 72px;
+            margin-bottom: 128px;
+            max-width: 652px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+
+            &__link {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 235px;
+                height: 50px;
+                border: 1px solid #575757;
+                color: #000;
+                font-size: 14px;
+                font-weight: 300;
+
+                &:hover {
+                    border: 1px solid $colorSelectSite;
+                    color: $colorSelectSite;
+                }
+            }
+        }
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            gap: 21px;
+            margin-bottom: 57px;
+            margin-top: 17px;
+
+            &__title {
+                color: #222;
+                font-size: 16px;
+                font-weight: 300;
+            }
+
+            &__input {
+                width: 358.986px;
+                height: 44px;
+                color: #222;
+                font-size: 13px;
+                font-weight: 300;
+
+                &[type=text] {
+                    padding: 17px;
+                    color: #B1B1B1;
+                    font-size: 13px;
+                    font-weight: 300;
+                }
+            }
+
+            &__submit {
+                width: 101.408px;
+                height: 35px;
+                color: #4A4A4A;
+                font-size: 11px;
+                font-weight: 300;
+            }
+
+        }
+
+        &__final {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+
+            &__sub {
+                color: #4A4A4A;
+                font-size: 11px;
+                font-weight: 400;
+                margin-right: 34px;
+                margin-bottom: 12px;
+
+
+                &::after {
+                    content: "$900";
+                    padding-left: 20px;
+                }
+            }
+
+            &__grand {
+                color: #222;
+                font-size: 16px;
+                font-weight: 300;
+                margin-right: 37px;
+                margin-bottom: 39px;
+
+                &::after {
+                    content: "$900";
+                    padding-left: 20px;
+                    font-weight: 700;
+                    color: $colorSelectSite;
+                }
+            }
+        }
+
+        &__box-button {
+            max-width: 360px;
+            display: flex;
+            justify-content: center;
+        }
+
+        &__button {
+            width: 273px;
+            height: 50px;
+            background-color: $colorSelectSite;
+            border: none;
+            color: #FFF;
+            font-family: Lato;
+            font-size: 16px;
+            font-weight: 300;
+
+            &:hover {
+                background-color: #FFF;
+                color: $colorSelectSite;
+                border: 1px solid $colorSelectSite;
+            }
+        }
+    }
 }
 
 .slider {
@@ -536,8 +747,27 @@ a {
         gap: $gapGrid;
         margin-bottom: 48px;
 
+        &__add-box {
+            width: 100%;
+            display: flex;
+            position: absolute;
+            align-items: center;
+            justify-content: center;
+            top: 188px;
+            pointer-events: none;
+            display: none;
+        }
+
         &__product {
             position: relative;
+
+            &:hover .product-box__content__product__img {
+                filter: brightness(15%);
+            }
+
+            &:hover .product-box__content__add-box {
+                display: flex;
+            }
 
             &__link {
                 background-color: #F7E4E2;
@@ -557,8 +787,27 @@ a {
             }
         }
 
-        &__product:hover .overlay {
-            opacity: 1;
+        &__add {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 12px;
+            border: 1px solid #FFF;
+            pointer-events: all;
+
+            &__text {
+                color: #FFF;
+                font-size: 13px;
+                font-weight: 700;
+            }
+
+            &__img {
+                margin-right: 8px;
+            }
+
+            &:hover {
+                box-shadow: 0 0 10px #FFF;
+            }
         }
 
         &__info {
@@ -649,7 +898,7 @@ a {
                 color: #C4C4C4;
                 font-size: 16px;
                 font-weight: 300;
-                
+
                 &:hover {
                     color: $colorSelectSite;
                 }
@@ -657,17 +906,6 @@ a {
         }
     }
 
-}
-
-.overlay {
-    width: 100%;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    transition: .3s ease;
 }
 
 .advantages {
