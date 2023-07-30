@@ -125,6 +125,17 @@ a {
   color: #F16D7F;
 }
 
+.head-page {
+  min-height: 148px;
+  display: flex;
+  align-items: center;
+}
+.head-page__title {
+  color: #F16D7F;
+  font-size: 24px;
+  font-weight: 400;
+}
+
 .top-head {
   min-height: 148px;
   display: flex;
@@ -428,6 +439,89 @@ a {
   background-color: #FFF;
   color: #F16D7F;
   border: 1px solid #F16D7F;
+}
+
+.registration {
+  padding-top: 64px;
+  display: flex;
+  flex-direction: row;
+  gap: 128px;
+}
+.registration__text {
+  color: #000;
+  font-size: 24px;
+  font-weight: 300;
+  display: block;
+  flex-direction: row;
+  margin-bottom: 16px;
+}
+.registration__text-img {
+  width: 20px;
+  height: 16px;
+  margin-right: 23px;
+}
+.questionnaire__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.questionnaire__input-title {
+  color: #222;
+  font-size: 16px;
+  font-weight: 300;
+}
+.questionnaire__input {
+  width: 358.986px;
+  height: 44px;
+  padding: 13px 16px 16px 17px;
+  border: 1px solid #A4A4A4;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+}
+.questionnaire__radio-box {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  color: #000;
+  font-size: 11px;
+  font-weight: 300;
+}
+.questionnaire__radio {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.questionnaire__input-help {
+  width: 359px;
+  color: #B1B1B1;
+  font-size: 13px;
+  font-weight: 300;
+  margin-bottom: 19px;
+}
+.questionnaire__input-button {
+  width: 167px;
+  height: 50px;
+  background-color: #F16D7F;
+  border: 1px solid #F16D7F;
+  color: #FFF;
+  font-size: 14px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  transition: 0.5s;
+}
+.questionnaire__input-button path {
+  transition: 0.5s;
+}
+.questionnaire__input-button:hover {
+  background-color: #FFF;
+  color: #F16D7F;
+}
+.questionnaire__input-button:hover path {
+  fill: #F16D7F;
 }
 
 .slider {
@@ -871,11 +965,12 @@ a {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+  transition: 0.5s;
 }
 .subscription__right__form__input__submit:hover {
   background-color: #FFF;
   color: #F16D7F;
-  border-color: #F16D7F;
+  border: 1px solid #F16D7F;
 }
 
 .footer {
